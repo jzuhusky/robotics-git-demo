@@ -8,7 +8,7 @@ Plan on about 30 minutes. The git commands are short. Signing in is the part tha
 
 When you are done, all of this is true:
 
-- [ ] You sent me your GitHub username, and I have added you to the repo.
+- [ ] You posted your GitHub username in the WhatsApp group, and you accepted the invite to the repo.
 - [ ] A push or an SSH test has succeeded, so GitHub recognizes your computer.
 - [ ] Your line is in `guestbook.txt` on the `main` branch.
 - [ ] GitHub shows a pull request with your new file on a branch.
@@ -16,6 +16,23 @@ When you are done, all of this is true:
 Work in **robotics-git-demo** only. That is this project:
 
 https://github.com/jzuhusky/robotics-git-demo
+
+## For the coach
+
+Students skip this section. Do it once a student posts their GitHub username in the WhatsApp group. An account that has not accepted an invite cannot push, so the guestbook step fails until both halves are done: you invite them, and they accept.
+
+1. Open https://github.com/jzuhusky/robotics-git-demo
+2. Click **Settings**.
+3. In the left sidebar, under **Access**, click **Collaborators**.
+4. Click **Add people**.
+5. Type the username they posted in the WhatsApp group and click the matching account. An email works only when it is the email on that GitHub account.
+6. Click **Add NAME to this repository**.
+
+The Collaborators page then lists them as pending. After they accept, they show up as a collaborator. An invite expires after 7 days. From that same page you can see who is still pending.
+
+On a personal repository, a collaborator can push, including a push straight to `main`. That is the guestbook step. Leave `main` unprotected for this assignment. Under **Settings**, check **Rules** and **Branches**. A rule that requires a pull request for `main` rejects the guestbook push even after they accept.
+
+GitHub caps how many people you can invite to one repository in a day. If **Add people** starts refusing invites, wait until the next day.
 
 ## Before you start
 
@@ -27,7 +44,7 @@ git --version
 
 A version number means git is installed. If the computer says `command not found`, finish [pre-requisites.md](pre-requisites.md) first.
 
-Send me your GitHub username if you have not already. I add each person to the repo by hand. Until I add you, the push in part 2 is rejected. That message means "you are not on the list yet," and the fix is me adding you.
+Post your GitHub username in the WhatsApp group if you have not already. I invite that account to the repo. You will get an email from GitHub, and the same invite shows up under the bell icon on the website. Click **Accept invitation**. Until you accept, the push in part 2 is rejected. That message means the invite is still waiting, or your username is not in the WhatsApp group yet.
 
 ## 1. Tell git your name, and sign in to GitHub
 
@@ -76,7 +93,7 @@ Keep the token somewhere only you can open, such as a notes app with a lock, or 
 - Do not paste it in a group chat.
 - Do not put it in a screenshot.
 
-If a teammate sees it, delete that token on the same GitHub page and make a new one. Tell me.
+If a teammate sees it, delete that token on the same GitHub page and make a new one. Post in the WhatsApp group that you deleted it.
 
 You will use this address when you clone in part 2:
 
@@ -248,7 +265,7 @@ Then refresh the repo page on GitHub. Your line is in `guestbook.txt`, and your 
 
 ### If push is rejected
 
-**You don't have permission.** The message mentions permission, or `403`, or access denied. Send me your GitHub username. I still need to add you. Your commit is safe on your computer. Push again after I reply.
+**You don't have permission.** The message mentions permission, or `403`, or access denied. Your commit is safe on your computer. Open GitHub, click the bell icon, and accept the repository invite if it is sitting there. Then run `git push` again. If there is no invite, post your GitHub username in the WhatsApp group. I still need to add you.
 
 **Someone else signed the book while you were working.** The message says the remote contains work you do not have, or tells you to pull first. Run:
 
@@ -257,7 +274,7 @@ git pull
 git push
 ```
 
-**Git says CONFLICT.** Stop. Do not commit again. Open `guestbook.txt` only to look. Lines made of `<<<<<<<` and `>>>>>>>` are git marking the two versions it could not combine. Leave them there and message me with a screenshot of the Terminal. We will clean it up together.
+**Git says CONFLICT.** Stop. Do not commit again. Open `guestbook.txt` only to look. Lines made of `<<<<<<<` and `>>>>>>>` are git marking the two versions it could not combine. Leave them there and post a screenshot of the Terminal in the WhatsApp group. We will clean it up together.
 
 ## 3. Add a new file, on a branch
 
@@ -332,14 +349,14 @@ That pull request is the homework. I merge it onto `main` after I read it. Your 
 
 ## You are done when
 
-1. I have your GitHub username.
+1. Your GitHub username is in the WhatsApp group, and you accepted the invite.
 2. Way A has pushed successfully, or `ssh -T git@github.com` greeted you by username.
 3. Your guestbook line is visible on GitHub in `guestbook.txt`.
 4. An open pull request contains `students/yourname.txt`.
 
 ## If you get stuck
 
-Send me the command you typed and the full text the computer printed.
+Post in the WhatsApp group: the command you typed, and the full text the computer printed.
 
 A few messages and what they usually mean:
 

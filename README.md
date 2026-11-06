@@ -266,10 +266,10 @@ Read the message. Git writes a lot, and the useful part is usually the last few 
 
 We mistyped commands in class, including ones git does not have. The fix was to read the answer and try the right command. A typo is part of using a terminal, the same way a missed bolt is part of building a robot.
 
-If you have been stuck for a few minutes, stop and send me two things: the command you typed, and the full message the computer printed. Leave the folder where it is. The history is the valuable part, and deleting the folder throws it away.
+If you have been stuck for a few minutes, stop and post two things in the WhatsApp group: the command you typed, and the full message the computer printed. Leave the folder where it is. The history is the valuable part, and deleting the folder throws it away.
 
 ## Before class, and the homework
 
-1. [pre-requisites.md](pre-requisites.md) — install git, create a GitHub account, send me your username.
+1. [pre-requisites.md](pre-requisites.md) — install git, create a GitHub account, post your username in the WhatsApp group.
 2. [command-line.md](command-line.md) — practice moving between folders.
 3. [HOMEWORK.md](HOMEWORK.md) — sign in, sign the guestbook, add a file on a branch.

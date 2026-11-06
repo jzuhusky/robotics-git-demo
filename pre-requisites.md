@@ -17,7 +17,7 @@ When you are done:
 
 - [ ] `git --version` prints a version number.
 - [ ] You can log in at https://github.com
-- [ ] You have sent me your GitHub username.
+- [ ] You have posted your GitHub username in the WhatsApp group.
 
 The commands for moving between folders are in [command-line.md](command-line.md). Skim that once git is installed. You do not have to memorize it.
 
@@ -25,7 +25,7 @@ Homework comes after this, in [HOMEWORK.md](HOMEWORK.md).
 
 ## If your computer is a Chromebook
 
-Stop here and tell me. A school Chromebook usually cannot install git. We will set you up another way.
+Stop here and post in the WhatsApp group. A school Chromebook usually cannot install git. We will set you up another way.
 
 ## 1. Install git
 
@@ -51,7 +51,7 @@ xcode-select --install
 
 Click Install on the window that opens, wait, then try `git --version` again.
 
-If the computer asks for an administrator password you do not have, stop and tell me. Some school laptops block this install.
+If the computer asks for an administrator password you do not have, stop and post in the WhatsApp group. Some school laptops block this install.
 
 ### Windows
 
@@ -81,7 +81,7 @@ A version number means you are done with this step. If the command is missing an
 sudo apt install git
 ```
 
-It asks for the password you use to log into the computer. Nothing shows as you type the password. Press Enter. If that command fails, send me the message and stop.
+It asks for the password you use to log into the computer. Nothing shows as you type the password. Press Enter. If that command fails, post the message in the WhatsApp group and stop.
 
 ### The check, on every computer
 
@@ -104,7 +104,7 @@ You can choose **Continue with Google** or **Continue with Apple** instead of ty
 
 If GitHub asks extra questions about your interests, or offers a paid plan, stay on the free account and skip anything optional.
 
-When you are in, click your profile picture. Your username is there. Send that username to me. I add each person to the class repo by hand. Until I do, you can look at the project on the website, and a push from your computer will be rejected.
+When you are in, click your profile picture. Your username is there. Post that username in the WhatsApp group. I add each person to the class repo by hand. Until I do, you can look at the project on the website, and a push from your computer will be rejected.
 
 GitHub may also offer two-factor authentication, a second check when you log in. You can skip it for now. If you turn it on, save the recovery codes somewhere you can find them. Those codes are how you get back in if you lose your phone.
 
@@ -112,6 +112,6 @@ GitHub may also offer two-factor authentication, a second check when you log in.
 
 1. `git --version` prints a number.
 2. You can open https://github.com and see your username.
-3. I have that username.
+3. The WhatsApp group has your username.
 
 Next, glance at [command-line.md](command-line.md), then do [HOMEWORK.md](HOMEWORK.md).
