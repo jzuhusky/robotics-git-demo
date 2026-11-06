@@ -93,7 +93,7 @@ Create one:
 8. Expiration: 90 days.
 9. Check the single box named **repo**. Leave the other boxes unchecked. That one box is permission to read and write repos from the Terminal.
 10. Scroll down and click **Generate token**.
-11. Copy the token right then. It starts with `github_pat_` or `ghp_`. GitHub shows it once. If you lose the page, generate a new token. The old one still works until it expires, and you can delete it.
+11. Copy the token right then. A classic token starts with `ghp_`. GitHub shows it once. If you leave the page before copying it, you cannot get that same token back. Generate a new one, and delete the one you never copied.
 
 Keep the token somewhere only you can open, such as a notes app with a lock, or a password manager. It is a password.
 
@@ -187,7 +187,7 @@ Success looks like this:
 Hi YOUR-USERNAME! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-That second half is a success message. GitHub is saying "I know who you are, and this door is only for git, not for a general login."
+That second half is part of the success message. GitHub recognized your key, and this connection is only for git commands.
 
 You will use this address when you clone in part 3:
 

@@ -1,6 +1,6 @@
 # Robotics Git Demo
 
-This folder is the project we made together in class. It holds two text files and the history of how they were written. Your homework is to add yourself to that history.
+This folder is the project we made together in class. In class it held two files, `file.txt` and `guestbook.txt`, plus the history of how they were written. Your homework is to add yourself to that history.
 
 The Terminal felt fast in class. That is a normal first reaction. You can go one command at a time at home. Read what the computer prints before you type the next thing.
 
