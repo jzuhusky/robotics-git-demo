@@ -12,7 +12,7 @@ This folder is the project we made together in class. In class it held two files
          / \ / \
 ```
 
-Before class, install git and make a GitHub account: [pre-requisites.md](pre-requisites.md).
+Before you do the homework, install git and make a GitHub account: [pre-requisites.md](pre-requisites.md).
 
 The commands for moving around the computer are in [command-line.md](command-line.md).
 
