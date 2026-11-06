@@ -25,7 +25,7 @@ Homework comes after this, in [HOMEWORK.md](HOMEWORK.md).
 
 ## If your computer is a Chromebook
 
-Stop here and post in the WhatsApp group. A school Chromebook usually cannot install git. We will set you up another way.
+Stop here and post in the WhatsApp group. A school Chromebook usually cannot install git. You'll need to use some other computer or just use the Github website to sign the guestbook. 
 
 Run only the commands written on this page. If a step shows a command you do not recognize, post it in the WhatsApp group or search it before you press Enter. The longer version of that rule is in [command-line.md](command-line.md).
 
