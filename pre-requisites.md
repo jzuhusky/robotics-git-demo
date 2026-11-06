@@ -104,7 +104,7 @@ You can choose **Continue with Google** or **Continue with Apple** instead of ty
 
 If GitHub asks extra questions about your interests, or offers a paid plan, stay on the free account and skip anything optional.
 
-When you are in, click your profile picture. Your username is there. Post that username in the WhatsApp group. I add each person to the class repo by hand. Until I do, you can look at the project on the website, and a push from your computer will be rejected.
+When you are in, click your profile picture. Your username is there. Post that username in the WhatsApp group. I add each person to the class repo by hand. You can look at the project on the website while you wait. Do not click the pencil, edit a file, or push until you have accepted the collaborator invite. Before that, GitHub treats your edit as a request to copy the whole project into your own account.
 
 GitHub may also offer two-factor authentication, a second check when you log in. You can skip it for now. If you turn it on, save the recovery codes somewhere you can find them. Those codes are how you get back in if you lose your phone.
 

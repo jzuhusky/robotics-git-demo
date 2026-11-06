@@ -8,8 +8,8 @@ Plan on about 30 minutes. The git commands are short. Signing in is the part tha
 
 When you are done, all of this is true:
 
-- [ ] You posted your GitHub username in the WhatsApp group, and you accepted the invite to the repo.
-- [ ] A push or an SSH test has succeeded, so GitHub recognizes your computer.
+- [ ] You posted your GitHub username in the WhatsApp group, accepted the invite, and only then edited the repo.
+- [ ] If you worked on your computer, a push or an SSH test succeeded. If you used the GitHub website, the commits show your username.
 - [ ] Your line is in `guestbook.txt` on the `main` branch.
 - [ ] GitHub shows a pull request with your new file on a branch.
 
@@ -19,7 +19,7 @@ https://github.com/jzuhusky/robotics-git-demo
 
 ## For the coach
 
-Students skip this section. Do it once a student posts their GitHub username in the WhatsApp group. An account that has not accepted an invite cannot push, so the guestbook step fails until both halves are done: you invite them, and they accept.
+Students skip this section. Add each student as soon as their username shows up in the WhatsApp group, and before they edit anything. The pencil on github.com, a push from their laptop, and a new file all go wrong until they are a collaborator and have accepted. If they edit early, GitHub asks them to fork the repo into their own account. That fork is a private copy, not the class guestbook.
 
 1. Open https://github.com/jzuhusky/robotics-git-demo
 2. Click **Settings**.
@@ -44,7 +44,9 @@ git --version
 
 A version number means git is installed. If the computer says `command not found`, finish [pre-requisites.md](pre-requisites.md) first.
 
-Post your GitHub username in the WhatsApp group if you have not already. I invite that account to the repo. You will get an email from GitHub, and the same invite shows up under the bell icon on the website. Click **Accept invitation**. Until you accept, the push in part 2 is rejected. That message means the invite is still waiting, or your username is not in the WhatsApp group yet.
+Post your GitHub username in the WhatsApp group if you have not already. I invite that account to the repo. You will get an email from GitHub, and the same invite shows up under the bell icon on the website. Click **Accept invitation**.
+
+Stop there until the invite is accepted. Do not edit `guestbook.txt`, do not click the pencil on github.com, and do not push. Part 1, telling git your name, can happen while you wait. Parts 2 and 3 cannot. If you click the pencil before you are a collaborator, GitHub offers to fork the project into your own account. That is a separate copy, and your name never lands in the class guestbook.
 
 ## 1. Tell git your name, and sign in to GitHub
 
@@ -189,9 +191,58 @@ git@github.com:jzuhusky/robotics-git-demo.git
 
 The files you download are the same ones Way A downloads. The address decides how you sign in.
 
+## How to change a file
+
+Accept the collaborator invite before you use any of these. The invite comes first, before TextEdit, before VS Code, before vim, and before the pencil on the website.
+
+**TextEdit, on a Mac.** From inside the `robotics-git-demo` folder, run:
+
+```bash
+open -a TextEdit guestbook.txt
+```
+
+If you see font sizes and colors, choose **Format → Make Plain Text**, then save. Git stores plain text.
+
+**Notepad, on Windows.** From inside the repo in Git Bash, run:
+
+```bash
+notepad guestbook.txt
+```
+
+Save, then close Notepad.
+
+**A code editor, such as VS Code.** Open the `robotics-git-demo` folder in the editor, click the file, type, and save. In VS Code, save is Command+S on a Mac and Ctrl+S on Windows.
+
+**vim,** if you want to learn the editor from class. Run `vim guestbook.txt`. Press `i`, then type. When you are finished, press Escape, type `:wq`, and press Enter. That saves and quits. To leave and throw away what you typed, press Escape, type `:q!`, and press Enter.
+
+**The GitHub website.** Open the file in the browser and click the pencil. That edits the class repo directly, once you are a collaborator. If the page tells you to fork the repository, stop and accept the invite first. Parts 2 and 3 say which commit button to press. The guestbook goes straight onto `main`. The new file goes on a branch.
+
+A website edit commits for you. You skip `git add`, `git commit`, and `git push`. An edit on your computer stays on your computer until you run those three commands, and the saved file has to be inside `robotics-git-demo`.
+
 ## 2. Sign the guestbook, on main
 
 `main` is the official copy of the project. This part edits it directly, the way we did in class. Part 3 does the safer version, on a branch.
+
+Add one new line at the bottom of `guestbook.txt`, matching the lines already there:
+
+```text
+Your Name, SHS Class of 20XX
+```
+
+Use your own name and class year. Do this in one place, the website or your computer.
+
+### On the GitHub website
+
+1. Open https://github.com/jzuhusky/robotics-git-demo/blob/main/guestbook.txt
+2. Click the pencil. If GitHub talks about forking, stop. Accept the collaborator invite, then come back.
+3. Add your line at the bottom.
+4. Choose **Commit directly to the `main` branch**.
+5. Commit message: `Your Name signed the guestbook`
+6. Click **Commit changes**.
+
+Reload the file. Your line is in the class guestbook, and part 2 is done. Skip the clone below and go to part 3.
+
+### On your computer
 
 Clone, using the address that matches the way you signed in.
 
@@ -228,23 +279,7 @@ Download any lines classmates have already added:
 git pull
 ```
 
-Open the guestbook in a simple editor:
-
-```bash
-nano guestbook.txt
-```
-
-`nano` is a text editor inside the Terminal. The controls are printed along the bottom. The `^` symbol means the Control key.
-
-1. Move to the end of the file with the arrow keys.
-2. Add one new line, matching the lines that are already there:
-
-```text
-Your Name, SHS Class of 20XX
-```
-
-3. Press Control+O, then Enter, to save. The letter is O, as in "output."
-4. Press Control+X to exit.
+Open `guestbook.txt` with TextEdit, Notepad, VS Code, or vim, using [How to change a file](#how-to-change-a-file). Add your line, and save.
 
 Back at the prompt, run the loop from class:
 
@@ -291,6 +326,23 @@ main      *---*---*---*-----------*      official copy
 
 Each `*` is a commit. Your file rides on the side branch until the pull request merges it into `main`.
 
+Do this in one place, the website or your computer. Use your first name in lowercase, with no spaces. Alex's file is `students/alex.txt` and Alex's branch is `alex-intro`.
+
+### On the GitHub website
+
+1. Open https://github.com/jzuhusky/robotics-git-demo
+2. Click **Add file**, then **Create new file**. If GitHub talks about forking, stop and accept the collaborator invite first.
+3. Name the file `students/yourname.txt`. Use your first name, lowercase. The slash creates the `students` folder. Alex types `students/alex.txt`.
+4. Write a few lines: your name and grade, one thing you want to learn on this team, and anything else you want the team to know.
+5. Choose **Create a new branch for this commit and start a pull request**. Name the branch `yourname-intro`.
+6. Click **Propose changes**, then **Create pull request**.
+
+That pull request is the homework. I merge it onto `main` after I read it. Skip the terminal steps below.
+
+### On your computer
+
+If you signed the guestbook on the website, you do not have the folder yet. Do the clone steps in part 2, then come back here.
+
 Start from an up-to-date `main`, inside the `robotics-git-demo` folder:
 
 ```bash
@@ -299,22 +351,15 @@ git pull
 git checkout -b yourname-intro
 ```
 
-Replace `yourname` with your first name in lowercase, with no spaces. Alex would run:
+`git checkout main` stands on the official branch. `git checkout -b` makes a new branch and stands on that one instead. Alex would run `git checkout -b alex-intro`.
 
-```bash
-git checkout -b alex-intro
-```
-
-`git checkout main` stands on the official branch. `git checkout -b` makes a new branch and stands on that one instead.
-
-Make a folder for student files, then open a new file:
+Make a folder for the file, then open it in the same editor you used for the guestbook:
 
 ```bash
 mkdir -p students
-nano students/yourname.txt
 ```
 
-Use your first name, lowercase, in the file name too: `students/alex.txt`.
+Save the file as `students/yourname.txt` inside `robotics-git-demo`. In vim, that is `vim students/yourname.txt`.
 
 Write a few lines:
 
@@ -322,9 +367,7 @@ Write a few lines:
 - One thing you want to learn on this team
 - Anything else you want the team to know
 
-Save with Control+O, Enter. Leave with Control+X.
-
-Then:
+Save the file. Then:
 
 ```bash
 git status
@@ -349,8 +392,8 @@ That pull request is the homework. I merge it onto `main` after I read it. Your 
 
 ## You are done when
 
-1. Your GitHub username is in the WhatsApp group, and you accepted the invite.
-2. Way A has pushed successfully, or `ssh -T git@github.com` greeted you by username.
+1. Your GitHub username is in the WhatsApp group, you accepted the invite, and you edited only after that.
+2. If you worked on your computer, a push or an SSH test succeeded. If you used the website, the commits show your GitHub username.
 3. Your guestbook line is visible on GitHub in `guestbook.txt`.
 4. An open pull request contains `students/yourname.txt`.
 
@@ -364,11 +407,9 @@ A few messages and what they usually mean:
 | --- | --- |
 | `command not found: git` | Git is not installed. Finish [pre-requisites.md](pre-requisites.md). |
 | `not a git repository` | The Terminal is in the wrong folder. Run `pwd` and `ls`. You want to be inside `robotics-git-demo`. See [command-line.md](command-line.md). |
-| `nothing to commit, working tree clean` | Git sees no saved edit. In `nano`, Control+O writes the file. Also check that you edited the file inside this folder. |
+| `nothing to commit, working tree clean` | The editor did not save, or the file was saved outside `robotics-git-demo`. Save again, run `pwd`, and check that `ls` shows the file. |
 | `Authentication failed` | Way A used the website password, or the token was incomplete. Make a new classic token, check **repo**, and paste that when asked for a password. |
 | `Permission denied (publickey)` | Way B: GitHub does not have your public key yet, or the clone used the `git@github.com` address before the key was added. Repeat the `.pub` copy steps and the `ssh -T` test. |
 | `Connection timed out` on `ssh` | This network is blocking SSH. Use Way A and the `https://` address. |
 
-Stuck inside `vim` from class: press Escape, type `:q!`, press Enter.
-
-Stuck inside `nano`: Control+X. If it asks to save, press N to leave without saving, or Y and then Enter to keep the edit.
+Stuck inside `vim`: press Escape, type `:q!`, press Enter. That quits and leaves the file as it was.

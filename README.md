@@ -221,7 +221,7 @@ Scrooge McDuck, SHS Class of Never
 
 Your homework adds the next line.
 
-We edited the file with `vim`, an editor that lives inside the Terminal. It is powerful, and it is a bad first editor. If you ever land in it and cannot leave: press the Escape key, type `:q!`, and press Enter. That quits without saving. For homework, use the easier editor in [HOMEWORK.md](HOMEWORK.md).
+We edited the file with `vim`, an editor inside the Terminal. For homework you can use TextEdit on a Mac, Notepad on Windows, a code editor such as VS Code, or vim if you want to learn it. You can also edit on the GitHub website. The steps, and the rule that you wait to be added as a collaborator first, are in [HOMEWORK.md](HOMEWORK.md). If you ever land in vim and cannot leave: press Escape, type `:q!`, and press Enter.
 
 ### Getting a copy on another computer
 
