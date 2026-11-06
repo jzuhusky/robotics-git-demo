@@ -2,6 +2,12 @@
 
 The Terminal is a text window for talking to your computer. You are always standing in one folder. Commands act on that folder until you move.
 
+## Before you press Enter
+
+Run the commands from these pages, and run them in a folder you chose on purpose. Homework commands belong inside `robotics-git-demo`. The practice at the bottom of this page belongs inside `terminal-practice`. Run `pwd` first. If the path is not the folder you meant, `cd` there before you type anything else.
+
+Do not run a command from a group chat, a random webpage, or a friend unless you know what it does. If you are not sure, stop. Post it in the WhatsApp group, or search the whole command and read what it does. Enter tells the computer to do the thing. Some commands delete files, and the computer does not move them to the trash or ask a second time. Checking first is how you keep the computer from exploding.
+
 ```text
   (the folder above)              cd ..
          |

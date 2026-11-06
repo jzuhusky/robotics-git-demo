@@ -36,6 +36,8 @@ GitHub caps how many people you can invite to one repository in a day. If **Add 
 
 ## Before you start
 
+Run only the commands written in these pages, and run them in the folder the page names. `pwd` tells you where you are. If you do not know what a command does, do not run it. Post it in the WhatsApp group, or search it, and confirm it is safe. A command you do not understand can delete files. The full version of this rule is in [command-line.md](command-line.md).
+
 Open Terminal on a Mac, or Git Bash on Windows.
 
 ```bash

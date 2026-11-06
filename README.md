@@ -20,6 +20,8 @@ The assignment is in [HOMEWORK.md](HOMEWORK.md).
 
 The pictures in this file are drawn with keyboard characters, so they still show up in the Terminal. The Terminal felt fast in class. That is a normal first reaction. You can go one command at a time at home. Read what the computer prints before you type the next thing.
 
+Run the commands from these pages inside the folder they name. If you are not sure what a command does, ask in the WhatsApp group or look it up before you press Enter. That check is what keeps the computer from exploding.
+
 ## The idea, in one picture
 
 Imagine the team is writing the code that drives the robot.
