@@ -1,12 +1,14 @@
 # Homework
 
-Do these four things before our next meeting, in this order. Each part needs the one before it.
+Do this after [pre-requisites.md](pre-requisites.md). Git should already be installed, and you should already have a GitHub account.
 
-Plan on about 45 minutes. Most of that time is making an account and signing in. The git commands at the end are short.
+Moving between folders is covered in [command-line.md](command-line.md). Keep that page open if `cd` and `pwd` are still new.
+
+Plan on about 30 minutes. The git commands are short. Signing in is the part that takes the longest.
 
 When you are done, all of this is true:
 
-- [ ] You have a GitHub account, and you have sent me the username.
+- [ ] You sent me your GitHub username, and I have added you to the repo.
 - [ ] A push or an SSH test has succeeded, so GitHub recognizes your computer.
 - [ ] Your line is in `guestbook.txt` on the `main` branch.
 - [ ] GitHub shows a pull request with your new file on a branch.
@@ -15,46 +17,19 @@ Work in **robotics-git-demo** only. That is this project:
 
 https://github.com/jzuhusky/robotics-git-demo
 
-## 0. Open a Terminal, and check that git is installed
+## Before you start
 
-You need a computer where you can install programs. A school Chromebook usually cannot do these steps. If that is the machine you have, tell me and we will set you up another way.
-
-**Mac**
-
-1. Press Command and the space bar together. A search box opens.
-2. Type `Terminal` and press Enter.
-3. A window appears with a blinking cursor. That window is the Terminal.
-
-**Windows**
-
-1. Download Git from https://git-scm.com/download/win and install it. The default choices are fine. Click through them.
-2. Open the Start menu, type `Git Bash`, and press Enter.
-3. Use that window for every command below. The regular Command Prompt is a different program.
-
-The line you type on ends in `$` or `%`. You do not type that symbol. You type the command, then press Enter.
-
-Check git:
+Open Terminal on a Mac, or Git Bash on Windows.
 
 ```bash
 git --version
 ```
 
-A version number means you are ready. On a Mac, the computer may ask to install developer tools. Click Install, wait for it to finish, and run `git --version` again.
+A version number means git is installed. If the computer says `command not found`, finish [pre-requisites.md](pre-requisites.md) first.
 
-If the computer says `command not found`, stop and message me. The rest of the homework needs git.
+Send me your GitHub username if you have not already. I add each person to the repo by hand. Until I add you, the push in part 2 is rejected. That message means "you are not on the list yet," and the fix is me adding you.
 
-Paste in the Terminal is Command+V on a Mac. In Git Bash, right-click the window and choose Paste.
-
-## 1. Create a GitHub account
-
-1. Go to https://github.com/signup
-2. Use an email you can actually check. GitHub sends a code.
-3. Pick a username you are willing to have on a team. Your name is a good username. The team will learn it.
-4. Finish the signup and open the confirmation email.
-
-Send me the username. I add each person to the repo by hand. Until I add you, the push in part 3 is rejected. That message means "you are not on the list yet," and the fix is me adding you.
-
-## 2. Tell git your name, and sign in to GitHub
+## 1. Tell git your name, and sign in to GitHub
 
 ### Put your name on your commits
 
@@ -103,7 +78,7 @@ Keep the token somewhere only you can open, such as a notes app with a lock, or 
 
 If a teammate sees it, delete that token on the same GitHub page and make a new one. Tell me.
 
-You will use this address when you clone in part 3:
+You will use this address when you clone in part 2:
 
 ```text
 https://github.com/jzuhusky/robotics-git-demo.git
@@ -189,7 +164,7 @@ Hi YOUR-USERNAME! You've successfully authenticated, but GitHub does not provide
 
 That second half is part of the success message. GitHub recognized your key, and this connection is only for git commands.
 
-You will use this address when you clone in part 3:
+You will use this address when you clone in part 2:
 
 ```text
 git@github.com:jzuhusky/robotics-git-demo.git
@@ -197,9 +172,9 @@ git@github.com:jzuhusky/robotics-git-demo.git
 
 The files you download are the same ones Way A downloads. The address decides how you sign in.
 
-## 3. Sign the guestbook, on main
+## 2. Sign the guestbook, on main
 
-`main` is the official copy of the project. This part edits it directly, the way we did in class. Part 4 does the safer version, on a branch.
+`main` is the official copy of the project. This part edits it directly, the way we did in class. Part 3 does the safer version, on a branch.
 
 Clone, using the address that matches the way you signed in.
 
@@ -228,7 +203,7 @@ pwd
 ls
 ```
 
-`pwd` should end in `robotics-git-demo`. `ls` should show `file.txt`, `guestbook.txt`, `README.md`, and `HOMEWORK.md`.
+`pwd` should end in `robotics-git-demo`. `ls` should show `file.txt`, `guestbook.txt`, `README.md`, `HOMEWORK.md`, `pre-requisites.md`, and `command-line.md`. If `pwd` ends in your name, or in your home folder, you are one level too high. Run `cd robotics-git-demo` and check again. [command-line.md](command-line.md) is the page for this kind of "where am I?" problem.
 
 Download any lines classmates have already added:
 
@@ -284,11 +259,20 @@ git push
 
 **Git says CONFLICT.** Stop. Do not commit again. Open `guestbook.txt` only to look. Lines made of `<<<<<<<` and `>>>>>>>` are git marking the two versions it could not combine. Leave them there and message me with a screenshot of the Terminal. We will clean it up together.
 
-## 4. Add a new file, on a branch
+## 3. Add a new file, on a branch
 
-Part 3 changed `main` directly because the guestbook is one shared list. Robot code goes on a branch first, so a half-finished change stays off the copy everyone else is using.
+Part 2 changed `main` directly because the guestbook is one shared list. Robot code goes on a branch first, so a half-finished change stays off the copy everyone else is using.
 
 A branch is a second timeline, starting from `main` at the moment you create it. Your commits land on that timeline. `main` stays as it was until we merge your branch in. A **pull request** is you asking to merge it.
+
+```text
+main      *---*---*---*-----------*      official copy
+                    \           /
+                     *---*---*           students/yourname.txt
+                     yourname-intro
+```
+
+Each `*` is a commit. Your file rides on the side branch until the pull request merges it into `main`.
 
 Start from an up-to-date `main`, inside the `robotics-git-demo` folder:
 
@@ -361,8 +345,8 @@ A few messages and what they usually mean:
 
 | What you see | What it usually means |
 | --- | --- |
-| `command not found: git` | Git is not installed. Go back to part 0. |
-| `not a git repository` | The Terminal is in the wrong folder. Run `pwd` and `ls`. You want to be inside `robotics-git-demo`. |
+| `command not found: git` | Git is not installed. Finish [pre-requisites.md](pre-requisites.md). |
+| `not a git repository` | The Terminal is in the wrong folder. Run `pwd` and `ls`. You want to be inside `robotics-git-demo`. See [command-line.md](command-line.md). |
 | `nothing to commit, working tree clean` | Git sees no saved edit. In `nano`, Control+O writes the file. Also check that you edited the file inside this folder. |
 | `Authentication failed` | Way A used the website password, or the token was incomplete. Make a new classic token, check **repo**, and paste that when asked for a password. |
 | `Permission denied (publickey)` | Way B: GitHub does not have your public key yet, or the clone used the `git@github.com` address before the key was added. Repeat the `.pub` copy steps and the `ssh -T` test. |
