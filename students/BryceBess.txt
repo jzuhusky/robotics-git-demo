@@ -1,0 +1,5 @@
+My name is Bryce Bess, Sophomore Class of 2029
+One thing i want to learn on the team is how to use my Java skills to program the robot.
+I already have experience with python building websites and projects and i am
+already familiar with Java syntax however i'm unfimilar with how to apply that to 
+programming robots as of now.
